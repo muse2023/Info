@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, RefreshCw } from 'lucide-react';
+import { ExternalLink, RefreshCw, Download } from 'lucide-react';
 import { urls } from './config/urls';
 
 function App() {
@@ -48,6 +48,22 @@ function App() {
               <h2 className="text-xl font-semibold text-gray-800 mb-2">订阅转换</h2>
               <p className="text-gray-600 text-center text-sm">
                 转换订阅链接格式
+              </p>
+            </div>
+          </button>
+
+          {/* 软件下载 */}
+          <button 
+            onClick={() => handleClick(urls.softwareDownload)}
+            className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+          >
+            <div className="flex flex-col items-center">
+              <div className="p-3 bg-green-100 rounded-full mb-4 group-hover:bg-green-200 transition-colors duration-300">
+                <Download className="w-8 h-8 text-green-600" />
+              </div>
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">软件下载</h2>
+              <p className="text-gray-600 text-center text-sm">
+                下载最新版本软件
               </p>
             </div>
           </button>
